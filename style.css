@@ -64,7 +64,7 @@ footer {
 }
 
 .about-page h2 {
-    color: #004b23; 
+    color: #ff6f00; 
 }
 
 .about-page p {
@@ -87,10 +87,7 @@ footer {
     margin: 10px auto;
     line-height: 1.5;
 }
-
-
     nav a {
         margin: 0 10px;
     }
-}
 
