@@ -1,19 +1,19 @@
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;  
-    align-items: flex-start;  
-    padding-top: 180px; 
-    padding-bottom: 40px;
-}
+/* =========================
+   GENERAL BODY STYLING
+========================= */
 body {
     margin: 0; 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: white; /* all pages have white background */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* =========================
+   STICKY HEADER
+========================= */
 header {
     position: fixed; 
     top: 0;
@@ -21,13 +21,18 @@ header {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
+
+/* =========================
+   NAVIGATION MENU
+========================= */
 nav {
     margin-top: 10px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -35,44 +40,90 @@ nav a {
     font-weight: bold;
     transition: color 0.3s ease;
 }
+
 nav a:hover {
     color: #00bfff;
 }
+
+/* =========================
+   MAIN CONTENT
+========================= */
 main {
     flex: 1;
     display: flex;
-    justify-content: center; 
-    align-items: center;     
+    justify-content: center; /* horizontal center */
+    align-items: flex-start; /* start from top so header doesn't cover */
     text-align: center;
-    padding: 120px 20px 40px; 
+    padding: 200px 20px 40px; /* padding-top ensures content starts below header */
 }
+
+.content {
+    max-width: 800px;
+}
+
+/* Center images */
+.content img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 15px 0;
 }
+
+/* =========================
+   ABOUT PAGE STYLING
+========================= */
+.about-page {
+    background-color: white; /* same white background for consistency */
+}
+
 .about-page h2 {
     color: #004b23; 
 }
+
 .about-page p {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 10px auto;
     line-height: 1.5;
 }
+
+/* =========================
+   CONTACT PAGE STYLING
+========================= */
+.contact-page {
+    background-color: white; /* same white background */
+}
+
 .contact-page h2 {
     color: #ff6f00;
 }
+
 .contact-page p {
     font-size: 1rem;
     max-width: 700px;
     margin: 10px auto;
     line-height: 1.5;
-
 }
 
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+@media (max-width: 600px) {
+    main {
+        padding-top: 180px;
+    }
 
-
-
-
+    nav a {
+        margin: 0 10px;
+    }
+}
