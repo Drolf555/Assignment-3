@@ -85,16 +85,9 @@ main section h2,
 main section#games h3 {
     color: #ff6f00;
 }
-
-
-
-/* 1. Smooth transitions for all elements */
 body, header, footer, main, section, .about-page, .contact-page {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
-
-/* 2. THE FIX: High-priority Dark Mode rules */
-/* We target the body AND the specific page classes while in dark mode */
 body.dark-mode, 
 body.dark-mode main,
 body.dark-mode .about-page, 
@@ -102,14 +95,10 @@ body.dark-mode .contact-page {
     background-color: #1a1a1a !important;
     color: #ffffff !important;
 }
-
-/* 3. Keep headers orange in Dark Mode */
 body.dark-mode h2, 
 body.dark-mode h3 {
     color: #ff6f00 !important;
 }
-
-/* 4. Button Styling */
 #theme-toggle {
     color: white;
     background: transparent;
@@ -121,7 +110,6 @@ body.dark-mode h3 {
     margin: 0 15px;
     transition: color 0.3s ease;
 }
-
 #theme-toggle:hover {
     color: #00bfff;
 }
