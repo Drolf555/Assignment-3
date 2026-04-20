@@ -95,16 +95,18 @@ main section#games h3 {
 
 
 
-/* --- Dark Mode Functionality --- */
 
-/* 1. Smooth transition for theme switching */
-body, header, footer, section, main, .about-page, .contact-page {
+/* Existing styles at the top... */
+
+/* --- Add/Replace this at the bottom of your CSS --- */
+
+/* Smooth transition for colors */
+body, header, footer, main, section, .about-page, .contact-page {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* 2. The Night Match Styles */
-/* Adding 'body.dark-mode' before the page classes makes this rule stronger */
-body.dark-mode,
+/* Force the background to change when dark-mode is active */
+body.dark-mode, 
 body.dark-mode .about-page, 
 body.dark-mode .contact-page,
 body.dark-mode main {
@@ -112,35 +114,25 @@ body.dark-mode main {
     color: #ffffff !important;
 }
 
-/* 3. Keep headers orange in Dark Mode */
+/* Keep your soccer-orange headers bright in dark mode */
 body.dark-mode h2, 
 body.dark-mode h3 {
     color: #ff6f00 !important;
 }
 
-/* 4. Navigation Reset (To make the button look like a link) */
-nav a, #theme-toggle {
+/* Reset the button to look like a link */
+#theme-toggle {
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s ease;
     background: transparent;
     border: none;
-    padding: 0;
+    font-weight: bold;
     font-family: inherit;
     font-size: 16px;
     cursor: pointer;
+    margin: 0 15px;
+    transition: color 0.3s ease;
 }
 
-nav a:hover, #theme-toggle:hover {
+#theme-toggle:hover {
     color: #00bfff;
-}
-/* Add this to the bottom of your style.css */
-body.dark-mode, 
-body.dark-mode .about-page, 
-body.dark-mode .contact-page,
-body.dark-mode main {
-    background-color: #1a1a1a !important;
-    color: white !important;
 }
