@@ -1,30 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 1. THEME SWITCHER ---
     const themeBtn = document.getElementById('theme-toggle');
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            // Toggles the class on the <body>
+            // This is the line that actually makes the magic happen
             const isDark = document.body.classList.toggle('dark-mode');
-            
-            // Updates text based on the mode
-            if (isDark) {
-                themeBtn.textContent = "Day Match";
-            } else {
-                themeBtn.textContent = "Night Match";
-            }
+            themeBtn.textContent = isDark ? "Day Match" : "Night Match";
         });
     }
 
-    // --- 2. FORM VALIDATION ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
             const emailInput = document.getElementById('user-email');
             if (emailInput.value.trim() === "") {
-                event.preventDefault(); // Stop form submission
-                alert("Please enter an email address before sending.");
+                event.preventDefault();
+                alert("Please enter an email address.");
             }
         });
     }
