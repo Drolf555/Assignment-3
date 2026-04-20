@@ -136,3 +136,11 @@ nav a, #theme-toggle {
 nav a:hover, #theme-toggle:hover {
     color: #00bfff;
 }
+/* Add this to the bottom of your style.css */
+body.dark-mode, 
+body.dark-mode .about-page, 
+body.dark-mode .contact-page,
+body.dark-mode main {
+    background-color: #1a1a1a !important;
+    color: white !important;
+}
