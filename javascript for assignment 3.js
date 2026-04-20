@@ -3,27 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            
+            // 1. Toggle the class on the body
             const isDark = document.body.classList.toggle('dark-mode');
-
-            if (isDark) {
-                themeBtn.textContent = "Switch to Day Match";
-            } else {
-                themeBtn.textContent = "Switch to Night Match";
-            }
-        });
-    }
-
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (event) => {
-            const emailInput = document.getElementById('user-email').value;
-
-            if (emailInput === "") {
             
-                event.preventDefault();
-                alert("Please enter an email address before submitting.");
+            // 2. Update text content dynamically
+            if (isDark) {
+                themeBtn.textContent = "Day Match";
+            } else {
+                themeBtn.textContent = "Night Match";
             }
         });
     }
