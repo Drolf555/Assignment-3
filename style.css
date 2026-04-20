@@ -92,26 +92,32 @@ main section h2,
 main section#games h3 {
     color: #ff6f00;
 }
-body {
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
-body.dark-mode header, 
-body.dark-mode footer {
-    background-color: #000000;
-}
-#theme-toggle {
-    cursor: pointer;
-    padding: 5px 10px;
-    background-color: #00bfff;
+/* Update your existing nav a styles to include the button ID */
+nav a, #theme-toggle {
     color: white;
-    border: none;
-    border-radius: 4px;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
+    
+    /* These lines reset the default button look */
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit; /* Uses Arial from body */
+    font-size: inherit;
+    cursor: pointer;
 }
 
+/* Ensure the hover effect applies to the button too */
+nav a:hover, #theme-toggle:hover {
+    color: #00bfff;
+}
+
+/* Specific Dark Mode overrides for the text color */
+body.dark-mode nav a:hover, 
+body.dark-mode #theme-toggle:hover {
+    color: #ff9f1c; /* Optional: a soccer-orange accent for dark mode */
+}
 
 
