@@ -92,7 +92,26 @@ main section h2,
 main section#games h3 {
     color: #ff6f00;
 }
-
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+body.dark-mode header, 
+body.dark-mode footer {
+    background-color: #000000;
+}
+#theme-toggle {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
 
 
 
