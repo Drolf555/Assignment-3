@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. THEME SWITCHER LOGIC ---
-    // This looks for the button in your header
+    // --- 1. THEME SWITCHER ---
     const themeBtn = document.getElementById('theme-toggle');
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            // Toggles the "dark-mode" class on the <body> tag
+            // Toggles the class on the <body>
             const isDark = document.body.classList.toggle('dark-mode');
             
-            // Updates the text of the button so users know how to switch back
+            // Updates text based on the mode
             if (isDark) {
                 themeBtn.textContent = "Day Match";
             } else {
@@ -18,21 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. CONTACT FORM VALIDATION LOGIC ---
-    // This looks for the form on your contact page
+    // --- 2. FORM VALIDATION ---
     const contactForm = document.getElementById('contact-form');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
-            // Select the email input field
             const emailInput = document.getElementById('user-email');
-
-            // If the email field is empty, stop the form from sending
             if (emailInput.value.trim() === "") {
-                event.preventDefault(); // Requirement: Stop the form submission
+                event.preventDefault(); // Stop form submission
                 alert("Please enter an email address before sending.");
-            } else {
-                alert("Thank you! Your message has been sent.");
             }
         });
     }
