@@ -129,7 +129,7 @@ body.dark-mode h3 {
     }
 }
 /* Mobile hamburger menu */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     nav {
         flex-direction: column;
         align-items: center;
@@ -145,7 +145,7 @@ body.dark-mode h3 {
         gap: 10px;
         margin-top: 10px;
     }
-    /* show links when menu is active */
+    /* show links when menu is clicked */
     nav.active .nav-links {
         display: flex;
     }
